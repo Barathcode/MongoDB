@@ -1,0 +1,13 @@
+Data types in MongoDB:
+-->BSON
+-->JSON
+-->Integer
+-->Boolean
+-->Double(like float)
+-->Arrays
+-->Object
+-->Null(means there is no value) (empty string means this has some value that is empty)
+-->Date
+-->Timestamp(specific to mongoDB)
+-->Object Id
+-->Code

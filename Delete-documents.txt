@@ -1,0 +1,8 @@
+#Multiple ways to delete data from collection
+
+1.deleteOne()---finds all documents in the collection
+    db.<collection_name>.deleteOne({<condition})
+
+2.deleteMany()---will delete many documents at once.
+                -if we pass empty curly braces it will delete all documents in the collection
+    db.<collection_name>.deleteMany({<condition>})

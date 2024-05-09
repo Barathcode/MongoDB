@@ -1,0 +1,5 @@
+#To create a collections 
+db.createCollection(name,options)
+
+#To drop a collection 
+db.<collection-name>.drop( )

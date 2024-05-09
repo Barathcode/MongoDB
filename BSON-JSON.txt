@@ -1,0 +1,29 @@
+JSON->Key value pairs
+-->easy to parse, easy to render, most languages
+
+BSON->MongoDB datatype
+-->Store and process data
+-->Binary encoded value (or) Binary encoded JSON is called BSON
+-->It has some extended data types ehich are not supported by JSON (like data,tmestamp,object_ID)
+
+Difference between JSON and BSON
+
+-->JSON based  databases usually return query results which can be effortlessly parsed,having modest or nix transformation
+-->straightforwardly by the use of JS
+
+-->In mongoDB,data representation is done in JSON document format,but here JSON is binary-encoded which is BSON.
+
+
+-->JSON, or JavaScript Object Notation, is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. 
+-->JSON data structures are often used for transmitting data between a server and a web application, as well as for storing data in files.
+
+-->When JSON data is processed, it typically undergoes transformation, which can involve various operations such as parsing, validation, manipulation, and serialization. 
+-->However, the term "modest" or "no transformation" might refer to scenarios where the JSON data is handled without significant alterations. Here's what it might imply:
+
+-->MODEST TRANSFORMATION: 
+    In this context, "modest transformation" could indicate that the JSON data undergoes some basic processing or manipulation but without significant changes to its structure or content. 
+    This might include operations like parsing the JSON string into a JavaScript object, accessing specific properties, or making minor modifications to the data.
+
+-->NO TRANSFORMATION: 
+    "No transformation" would imply that the JSON data remains unchanged throughout the processing pipeline. 
+    This could occur when the JSON data is simply transmitted from one system to another without any parsing, validation, or manipulation.

@@ -1,0 +1,16 @@
+#Multiple ways to read data from collection
+
+1.find()--->finds all the documents in the collection
+    db.<collection_name>.find()
+
+2.findOne()--->finds first documents in collection
+    db.<collection_name>.findOne()
+    
+3.By setting query conditions--->returns the document that matches with the condition
+    db.<collection_name>find({"key1":"value","key2":"value"})
+
+4.findOneAndReplace({"key1":"value","key2":"value"},{<replacement>})
+    //it gets two parameters first one is the data that need to be change and second one is data that need to be replaced.
+
+5.findOneAndDelete({"key1":"value","key2":"value"}) //deletes the document that matches the data.
+

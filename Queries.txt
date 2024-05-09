@@ -1,0 +1,36 @@
+QUERIES
+--->using find method of MongoDB with operators
+
+Conditions in find methods:
+//Equality (-Eq)
+//Less than (-lt)
+//less than Equal (-lte)
+//greater than (-gt)
+//greater than equal (-gte)
+
+---> $and -- AND operation
+//matches all conditions mentioned in the find method
+    db.leads.find({$and: [{},{}]})
+
+---> $or -- OR operation
+//match any condition in find method
+
+1.find() - will return all the documents in the collection
+
+2.Find with conditions
+    db.leads.find({"tax":"30"})
+
+3.Find method with multiple conditions (AND) by default
+    db.leads.find({"tax":"30","salary":"12000"})
+
+4.find method with tax less than 30
+    db.leads.find({"tax":{$lt:"30"}})
+
+5.find method with tax greater than equal 30
+    db.leads.find({"tax":{$gte:"30"}})
+
+6.And operator with find method
+    db.leads.find({$and : [{"tax":"30"}, {"salary":{$lte:"12000"}} ]})
+
+7.Or operator with find method
+    db.leads.find({$or : [{"tax":"30"}, {"salary":{$lte:"12000"}} ]})

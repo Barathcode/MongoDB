@@ -1,0 +1,124 @@
+1.show databases - list all databases in MongoDB
+
+2.db - show you the database you are working currently in
+
+3.use test - To come out of one database
+
+4.use <database-name> - select the database workspace as current working DB.
+                      - If not, it will create but it will not display till we add some collections/data inside it.
+
+5.To drop a database, First we need to select the DB
+    - use <database-name>
+    -db.dropDatabase();
+
+6.To create a new collection
+    db.createCollection(<"name of the collection">)
+
+7.To drop a collection
+    db.collectionName.drop()
+
+8.Insert document into the collection
+    db.<collection_name>.insert({"name":"barat"})
+
+9.TO insert many documents into the collection
+    db.<collection_name>.insertMany([{"name":"barat"},{"name":"dinesh"}])
+
+10.Delete 
+--->To delete one document from collction
+db.<collection_name>.deleteOne({"name":"sarath"});
+
+11.Delete many documents in the collection
+db.<collection_name>.deleteMany({<condition>});
+
+12.Update document in the collection
+db.<collection_name>.update(
+    {<condition>},
+    {
+        $set:{
+            "education":"schooling"
+        }
+    }
+);//it changes the education to schooling where "name":"barat"
+
+13.Update many documents in the collection`
+db.<collection_name>.updateMany(
+    {<condition>},
+    {
+        $set:{
+            "education":"schooling"
+        }
+    }
+); //it changes the education to schooling wherever "name":"barat"
+
+14.Read Datas from collection
+db.<collection_name>.find() //it shows all the documents in the collection
+
+15.Read first data from collection
+db.<collection_name>.findOne() //returns only the first document in the collection
+
+16.Read documents using the query
+db.<collection_name>.find({"name":"barat"}) //it returns the document that matches with name:"barat".
+                                            //we can give more conditions to this also.
+                                            //if it not matches with conditions it return the empty.
+
+17.findOneAndReplace
+-->it gets two parameters first one is the data that need to be change and second one is data that need to be replaced.
+db.<collection_name>.findOneAndReplace({"name":"sarath"},{"name:"barath"}) //wherever the name is sarath it changes to barath here.
+
+18.findOneAndDelete
+--->Gets one parameter if that matches it will delete the entire document.
+db.<collection_name>.findOneAndDelete({"name":"barat"}) //it deletes the entire document.
+
+19.deleteOne()---finds deletes the first document in the collection
+    db.<collection_name>.deleteOne({"name":"barat"}) //it deletes the first document which matches with the condition
+
+20.deleteMany()---will delete many documents at once.
+                -if we pass empty curly braces it will delete all documents in the collection
+    db.<collection_name>.deleteMany({"name":"barat"}) //it deletes the all the documents that matches with the data.
+
+21.find() - will return all the documents in the collection
+
+22.Find with conditions
+    db.leads.find({"tax":"30"})
+
+23.Find method with multiple conditions (AND) by default
+    db.leads.find({"tax":"30","salary":"12000"})
+
+24.find method with tax less than 30
+    db.leads.find({"tax":{$lt:"30"}})
+
+25.find method with tax greater than equal 30
+    db.leads.find({"tax":{$gte:"30"}})
+
+26.And operator with find method
+    db.leads.find({$and : [{"tax":"30"}, {"salary":{$lte:"12000"}} ]})
+
+27.Or operator with find method
+    db.leads.find({$or : [{"tax":"30"}, {"salary":{$lte:"12000"}} ]})
+
+28.db.leads.find({},{"city":1})
+    gets city key from all the documents in the collection along with id
+
+29.db.leads.find({},{"city":1,"_id":0})
+    gets only the city key from all the documents
+
+30.We can also add conditions to the above command
+    db.leads.find({"tax":{$lte:"30"}},{"tax":1,"_id":0})---gets only the tax only that are less than or equal to 30
+
+31.Aggregate functions
+    var pipeline =[
+        {$sort : {"name":1}},
+        {$limit : 3}
+    ];
+    db.leads.aggregate(pipeline);  //it will arrange the names in alphabetical order and limits to display only the first 3 names.
+
+32.We may not always want all the documents all the time
+    db.collection.find().limit(4);
+
+33.we may want to skip some documents we dont need
+    db.collection.find().skip(3); //skip will skip sequentially not random or advaoc
+
+34.Sorting
+    db.collection.find().sort({"name":1})
+    //1:means ascending 
+    //-1:means descending

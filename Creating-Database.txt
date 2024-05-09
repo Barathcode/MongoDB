@@ -1,0 +1,10 @@
+# To create a Database use the command:
+use <database-name>
+//If there will be database it shows the message like "switched to db <database-name>"
+
+//If there is no existing of database it will create a new database.
+//The newly created database will NOT visible unless we insert any document inside it.
+
+# To remove Database use the command:
+use <database_name> //To drop a database first we have select the database
+db.dropDatabase()

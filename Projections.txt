@@ -1,0 +1,10 @@
+PROJECTIONS
+-->nothing but another name for selecting fields for showing or hiding
+
+//By default it will bring all key/values from documents in collection
+
+find({<condition>},{<what keys we want to display>})
+    -->MongoDB gets all documents
+        -->matching documents
+            -->extract the keys that we have asked for
+                -->This result set is returned/projected as output

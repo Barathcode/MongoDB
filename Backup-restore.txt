@@ -1,0 +1,10 @@
+Steps to create a backup pf MongoDB Datas
+#BACKUP
+-->First create a folder where you want to save your data
+--->Next,Run the command "mongodump.exe"
+--->Verify the data dump and folder dumped correctly.
+
+#RESTORE
+--->Make sure you have got the back up of the data dump for MongoDB
+--->Next,run the command "mongorestore.exe"
+--->Verify the data dump and folder dumped correctly.

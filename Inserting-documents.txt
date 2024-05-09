@@ -1,0 +1,19 @@
+#Insert
+-->insert is used for creating new documents inside of the collection.
+
+#Insert one document into collection 
+Db.<collection-name>.insert({"name":"barat raj"})
+
+#Insert many documents into collection
+Db.<collction-name>.insertMany([
+    {"name":"barat raj"},
+    {"name":"dinesh raj"}
+]);
+
+#Delete 
+--->To delete one document from collction
+db.<collection_name>.deleteOne({"name":"sarath"});
+
+#Delete many documents in the collection
+db.<collection_name>.deleteMany({<condition>});
+

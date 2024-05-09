@@ -1,0 +1,32 @@
+#To update a document into collection
+--->update
+--->updateOne(it finds the first record and changes it)
+--->updateMany(updates multiple records at one goal)
+
+db.<collection_name>.update(
+    {<condition to check>},
+    {
+        $set:{
+            <changes to be done>
+        }
+    }
+);
+
+db.leads.update(
+    {"name":"barat"},
+    {
+        $set:{
+            "education":"schooling"
+        }
+    }
+);
+
+#To update many documents in the collection
+db.leads.updateMany(
+    {"name":"barat"},
+    {
+        $set:{
+            "name":"sarath"
+        }
+    }
+);

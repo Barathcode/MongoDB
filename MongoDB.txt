@@ -1,0 +1,36 @@
+Database --- Collection of data in a structured way
+SQL --- Structured Query Language
+RDBMS --- Relational Database Management System(entities defined and fixed relationship structure like rows and cols)
+
+NOSQL (OR) NON SQL (OR) NON-RELATIONAL DATABASE (OR) DOCUMENT DATABASE (OR) KEY-VALUE DATABASE
+
+NOSQL:
+--> mechanism for storage and retrieval of data
+--> The data is NOT modeled in relational or tabular format.
+--> All these datas are stored in a document as JSON file (or) JSON object as key-value pair.
+
+Any databases which are typically not followed the relational Database is called NOSQL database.
+
+NOSQL:
+*MongoDB
+*Amazon DocumentDB
+*Google Datastore 
+*Amazon DynamoDB
+*neo4j
+*redis
+
+NoSQL Databases are really powerful,high performance databases which are used in large data application.
+
+MongoDB
+--->MongoDB is a free and open source cross platform and Document oriented Database.
+--->MongoDB is classified as NoSQL Database program
+--->MongoDB uses JSON like document with Schemas.
+
+DOCUMENT ORIENTED DATABASE 
+--->Provides API or query/update language that exposes the ability to query (or) update based on internal structure in the document.
+--->MongoDB documents are composed of field-and-value pairs and have the following structure
+--->Does not have any concepts of joins.
+{
+    field1:value1,
+    field2:value2
+}

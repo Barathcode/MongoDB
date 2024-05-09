@@ -1,0 +1,4 @@
+#Sorting
+    db.collection.find().sort({"name":1})
+    //1:means ascending 
+    //-1:means descending

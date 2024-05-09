@@ -1,0 +1,74 @@
+DATABASE,DOCUMENT,COLLECTION
+
+DATABASE
+--->Database is collection of data.
+MongoDB DATABASE
+--->Physical container for collections.
+--->Database can have any number of collections
+--->Each database has its own set of files on the file System
+--->A MongoDB server can hosts multiple databases inside it.
+
+COLLECTION
+--->collection is a group of MongoDB documents
+--->We can relate collection as tables:
+--->but here, collection does not have any schema definition
+--->In table we use joins, here in MongoDB we use Aggregations.
+
+DOCUMENT
+--->Document in MongoDB is a set of key-value pairs.
+--->Every document in MongoDB has a unique value via Key "_id"
+--->Documents have flexible and dynamic schema
+--->Document schema is user-defined and is not fixed or static
+--->documents can hold any data as along as they are valid data types in MongoDB
+--->Document within a collection can have different schema or fields.
+--->documents within a collection are related data belonging to a particular subject.
+
+RDBMS:
+--->Relational Database Management System
+--->Tables,columns,rows
+
+Tables:
+--->stands for entities (like person,users,courses)
+
+Columns:
+--->Fields inside the table (eg.person have firstname,lastname,email,mobile,address)
+
+Rows:
+--->Actual datas 
+
+MONOGODB
+--->Database,Collection,Documents
+
+Documents:
+--->simple Key-value pair data
+--->Schema is different for different documents
+--->user-defined schema in MongoDB documents (not fixed or static)
+--->MongoDB will add a key automatically for each document
+    - _id(have 24 characters)
+--->Example:
+    {
+        "_id":<unique_value",
+        "firstName":"Barat",
+        "lastName":"raj",
+        "email":"abc2gmail.com"
+    }
+    {
+        "_id":<unique_value",
+        "firstName":"dinesh",
+        "lastName":"raj",
+        "email":"abc3gmail.com",
+        "address":"chennai"
+    } //first doc contains no address but second doc contains address so schema is different.
+
+Collections:
+--->set of documents
+--->can have any number of documents
+--->Documents can have any dynamic schema (can be same or different)
+--->collections do not enforce any schema 
+    (no joins concept,we use aggregation here)
+
+Database:
+--->single or more collections together can form a database
+
+Compass APP:
+--->It is GUI tool for managing our MongoDB.

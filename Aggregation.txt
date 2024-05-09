@@ -1,0 +1,25 @@
+ADDREGATION
+--->very similar to find command, where you can provide the criteria for your query in form of JSON Docs.
+--->Key element in aggregation is pipeline.
+--->It also helps in performing few operations like min,max,sum etc...
+
+command:
+    db.leads.aggregate(pipeline,options)
+
+Pipeline:
+--->Sequence of data aggregation operations or stages
+--->pipeline is an array
+
+options
+--->Documents can be passed as well
+
+AGGREGATE STAGES 
+$count  $group  $limit  $lookup  $match  $merge  $sort  $project  $unwind  $unset
+
+var pipeline =[
+    {$sort : {"name":1}},
+    {$limit : 1}
+];
+db.leads.aggregate(pipeline);
+
+like this we can use all the above operations like this.

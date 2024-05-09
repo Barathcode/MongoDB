@@ -1,0 +1,5 @@
+#We may not always want all the documents all the time
+    db.collection.find().limit(4);
+
+#we may want to skip some documents we dont need
+    db.collection.find().skip(3); //skip will skip sequentially not random or advaoc

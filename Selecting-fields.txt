@@ -1,0 +1,12 @@
+SELECTING FIELDS
+//1-it will show
+//0-it wiln not show
+
+db.leads.find() - all documents are returned
+
+db.leads.find({},{"city":1})---gets city key from all the documents in the collection along with id
+
+db.leads.find({},{"city":1,"_id":0})---gets only the city key from all the documents
+
+#We can also add conditions to the above command
+db.leads.find({"tax":{$lte:"30"}},{"tax":1,"_id":0})---gets only the tax only that are less than or equal to 30

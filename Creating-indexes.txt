@@ -1,0 +1,8 @@
+#To speed up process of retriving the data these indexes are introduced
+-->indexes are the fastest way to find information
+
+By Default:
+//every collection will have an index on "_id" key 
+
+How to add index on collection?
+    db.leads.ensureIndex("leadname":1)
